@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/deposit&withdraw.css">
+    <link rel="stylesheet" href="styles/style.css"
+</head>
+<body>
+    <div id="loading"></div>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:rgba(104, 242, 252, 0.836)">
+        <a class="navbar-brand" href=""><i class="fa fa-university fa-fw"></i>Trust Bank</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">HOME </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="deposit&withdraw.html">DEPOSIT&WITHDRAW <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">ALLDATA </a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <section>
+        <div id="login-area" class="container main-part">
+            <div class="login-form">
+                <h4>Login</h4>
+                <input type="text" class="form-control" placeholder="Enter Your Email...">
+                <br>
+                <input type="password" class="form-control" placeholder="Enter Your Password....">
+                <br>
+                <button id="login" class="btn btn-primary">ENTER</button>
+            </div>
+        </div>
+    </section>
+    <section id="transition-area" class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="deposit money-state">
+                    <h5>$Deposit</h5>
+                    <h1>$<span id="currantDepositId">00</span></h1>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="withdraw money-state">
+                    <h5>Withdraw</h5>
+                    <h1>$<span id="withdrawBtnAmount">00</span></h1>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="balance money-state">
+                    <h5>Balance</h5>
+                    <h1>$<span id="balanceAmount">1000</span></h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="login-form">
+                    <h4>Deposit</h4>
+                    <input id="depositAmountId" type="text" class="form-control" placeholder="$ amount you want to deposit">
+                    <br>
+                    <button id="depositBtn" class="btn btn-primary">deposit</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="login-form">
+                    <h4>Withdraw</h4>
+                    <input id="withdrawAmount" type="text" class="form-control" placeholder="$ amount you want to withdraw">
+                    <br>
+                    <button id="withdrawBtn" class="btn btn-primary">withdraw</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="JS/deposit&withdraw.js"></script>
+</body>
+</html>
